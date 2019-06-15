@@ -53,9 +53,9 @@ def petrosian_fd(x):
 
     -------
 
-        >>> np.random.seed(123)
-        >>> x = np.random.rand(100)
-        >>> print(petrosian_fd(x))
+        np.random.seed(123)
+        x = np.random.rand(100)
+        print(petrosian_fd(x))
             1.0505
     """
     n = len(x)
@@ -78,14 +78,14 @@ def katz_fd(x):
     -----
     Definition:
     .. math:: FD_{Katz} = \dfrac{log_{10}(n)}{log_{10}(d/L)+log_{10}(n)}
-    where :math:`L` is the total length of the time series and :math:`d`
+    `L` is the total length of the time series and :math:`d`
     is the Euclidean distance between the first point in the
     series and the point that provides the furthest distance
     with respect to the first point.
     ----------
-        >>> np.random.seed(123)
-        >>> x = np.random.rand(100)
-        >>> print(katz_fd(x))
+        np.random.seed(123)
+        x = np.random.rand(100)
+        print(katz_fd(x))
             5.1214
     """
     x = np.array(x)
@@ -148,9 +148,9 @@ def higuchi_fd(x, kmax=10):
 
 
     --------
-        >>> np.random.seed(123)
-        >>> x = np.random.rand(100)
-        >>> print(higuchi_fd(x))
+        np.random.seed(123)
+        x = np.random.rand(100)
+        print(higuchi_fd(x))
             2.051179
     """
     x = np.asarray(x, dtype=np.float64)
